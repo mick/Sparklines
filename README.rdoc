@@ -1,0 +1,22 @@
+= sparklines
+
+Generate a Jquery sparkline with interactions (click events and mouse over)
+
+== Usage
+
+=== Install
+
+    <script type="text/javascript" src="jquery.sparkline.withinteraction.js"></script>
+
+=== Start
+
+...documentation goes here...
+
+
+= Author
+
+Mick (mick@davidmichaelthompson.com)
+
+= License
+
+BSD
