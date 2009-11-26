@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Demo</title>
+	
+	<script type='text/javascript' src='jquery.js'></script>
+	<script type='text/javascript' src='jquery.sparkline.js'></script>
+	<script type='text/javascript' src='jquery.sparkline.events.js'></script>
+
+<script type='text/javascript'>
+	$(document).ready(function(){
+		$('.sparkline').sparklineEvents('html', { type:'bar', barColor:'#1e42c8', height:'40px', barWidth:10 , barSpacing:2, onClickCallback:function(elem, data){
+//						alert("hijacked"+elem+"  - "+data);
+		}});
+		$('.sparkline').bind("click", function(e){
+//		      alert(e);
+//			  alert(this);
+
+		    });
+	});
+</script>
+	
+</head>
+<body>
+	
+	<p>Sparkline: <span class="sparkline">1,4,6,6,8,5,3,5,6,6,8,5,3,5,1,4,6,5,3,5</span></p>
+
+	
+	
+</body>
+</html>

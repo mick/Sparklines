@@ -192,6 +192,8 @@
 
                 $.fn.sparkline[options.type].call(this, values, options, width, height);
             }
+			this.options = options;
+			this.uservalues = uservalues;
             // jQuery 1.3.0 completely changed the meaning of :hidden :-/
             if (($(this).html() && $(this).is(':hidden')) || ($.fn.jquery < "1.3.0" && $(this).parents().is(':hidden'))) {
                 pending.push([this, render]);
@@ -385,7 +387,7 @@
             barSpacing : 1,
             chartRangeMax: undefined,
             chartRangeMin: undefined,
-            colorMap : {}
+            colorMap : {},
         }, options ? options : {});
 
         var width = (values.length * options.barWidth) + ((values.length-1) * options.barSpacing);
@@ -434,7 +436,14 @@
                 }
                 if (options.colorMap[val]) {
                     color = options.colorMap[val];
+				
                 }
+				if((options.highlightIndex != undefined) && (i == options.highlightIndex )){
+					color = options.highlightColor;
+				}
+				if((options.selectIndex != undefined) && (i == options.selectIndex )){
+					color = options.selectColor;
+				}
                 target.drawRect(x, y, options.barWidth-1, height-1, color, color);
             }
         } else {

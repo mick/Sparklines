@@ -6,11 +6,19 @@ Generate a Jquery sparkline with interactions (click events and mouse over)
 
 === Install
 
-    <script type="text/javascript" src="jquery.sparkline.withinteraction.js"></script>
+    <script type="text/javascript" src="jquery.sparkline.events.js"></script>
 
 === Start
 
-...documentation goes here...
+Add jquery.sparkline.events.js after jquery.sparkline.js and of course jquery.js
+
+Call $('span').sparklineEvents instead of just .sparkline
+
+there are 2 additional options you can pass
+{{{
+onClickCallback: function()
+selectColor: '#hex color code'
+}}}
 
 
 = Author
